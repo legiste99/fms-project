@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="20dp"
+    >
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="9"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="5dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/stat_team_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="@string/team"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginStart="5dp"
+
+            />
+
+        <TextView
+            android:id="@+id/stat_team_games_played"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="GP"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginStart="5dp"
+
+            />
+
+        <TextView
+            android:id="@+id/stat_team_goal_for"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="GF"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginStart="5dp"
+
+            />
+
+        <TextView
+            android:id="@+id/stat_team_goals_against"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="GA"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginStart="5dp"
+
+            />
+
+        <TextView
+            android:id="@+id/stat_team_goal_diff"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="GD"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginStart="5dp"
+
+            />
+
+        <TextView
+            android:id="@+id/stat_team_points"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="P"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginStart="5dp"
+
+            />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/standings_table_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/linear"
+
+        />
+
+    <Button
+        android:id="@+id/table_ok_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ok"
+        style="?attr/materialButtonOutlinedStyle"
+        app:layout_constraintTop_toBottomOf="@id/standings_table_recycler_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="10dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
